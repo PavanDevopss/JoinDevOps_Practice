@@ -28,3 +28,4 @@ do
 done
 
 echo "Script execution completed at $(date +"%F %T"})" &>> $logs_file
+# echo "Script execution completed at $(date +"%F %T"})" &>> $logs_file
