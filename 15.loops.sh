@@ -14,7 +14,7 @@ mkdir -p $logs_folder # it creates if not existing if exists then nothing will h
 echo "Script started executing at $(date +"%F %T")" &>> $logs_file
 
 validate(){
-    if [$1 -ne 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo "$2 ...Failed" | tee -a $logs_file
         exit 1
     else
