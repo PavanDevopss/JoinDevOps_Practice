@@ -25,7 +25,7 @@ validate(){
 for package in $@
 do 
     dnf list installed $package &>> $logs_file
-    if [ $? -ne 0 ] then
+    if [ $? -ne 0 ]; then
         echo "Going to install : ${package}"
         dnf install $package -y &>> $logs_file
         validate $? "Installing ${package}"
@@ -34,4 +34,4 @@ do
     fi
 done
 
-echo "Script execution completed at $(date +"%F %T"})" &>> $logs_file
+echo "Script execution completed at $(date +"%F %T")" &>> $logs_file
