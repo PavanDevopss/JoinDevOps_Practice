@@ -43,3 +43,7 @@ do
 done
 
 echo "Script execution completed at $(date +"%F %T")" &>> $logs_file
+
+
+# so here we will handle using validate 
+# to handle known function!! why because set -e is mainly used to exit when error 
